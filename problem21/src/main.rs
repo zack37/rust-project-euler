@@ -9,10 +9,10 @@ fn amicable_pair(start: u64) -> Option<u64> {
     let divisors_sum_sum = sum_of_divisors(divisors_sum);
     
     if divisors_sum_sum == start && start != divisors_sum {
-        return Some(start);
+        Some(start)
+    } else {
+        None    
     }
-    
-    None
 }
 
 fn sum_of_divisors(n: u64) -> u64 {
